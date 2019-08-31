@@ -1,0 +1,16 @@
+
+PERMISSION DENIED (pUBLIC KEY) IF I PUSH A PROJECT
+
+Open git bash (Use the Windows search.  type "git bash")
+Type cd ~/.ssh. This will take you to the root directory for Git (Likely C:\Users\[YOUR-USER-NAME]\.ssh\ on Windows)
+Within the .ssh folder, there should be these two files: id_rsa and id_rsa.pub. These are the files that tell your computer how
+ to communicate with GitHub, BitBucket, or any other Git based service. Type ls to see a directory listing. If those two files 
+don't show up,
+ proceed to the next step. NOTE: Your SSH keys must be named id_rsa and id_rsa.pub in order for Git, GitHub, and BitBucket to
+ recognize them by default.
+To create the SSH keys, type ssh-keygen -t rsa -C "your_email@example.com".
+IT WILL ASK PATH FOR SSH KEY : -->> THEN ADD :id_rsa
+Now, go and open id_rsa.pub in your favorite text editor (you can do this via Windows Explorer or the OSX Finder if you like, typing open .
+ will open the folder).
+Copy the contents--exactly as it appears, with no extra spaces or lines--of id_rsa.pub and paste it into GitHub 
+ under the Account Settings > SSH Keys.
